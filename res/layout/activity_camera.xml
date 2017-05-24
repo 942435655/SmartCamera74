@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.tutk.IOTC.Monitor
+        android:id="@+id/monitor"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接状态" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="216dp" >
+
+        <View
+            android:visibility="invisible"
+            android:layout_margin="10dp"
+            android:id="@+id/v_center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="#F00" />
+
+        <ImageButton
+            android:id="@+id/ib_left"
+            android:onClick="sendCtrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/v_center"
+            android:background="@drawable/btn_left" />
+
+        <ImageButton
+            android:id="@+id/ib_right"
+            android:onClick="sendCtrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/v_center"
+            android:background="@drawable/btn_right" />
+
+        <ImageButton
+            android:id="@+id/ib_top"
+            android:onClick="sendCtrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/v_center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_top" />
+
+        <ImageButton
+            android:id="@+id/ib_bottom"
+            android:onClick="sendCtrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_bottom" />
+    </RelativeLayout>
+    <TextView 
+       android:gravity="center_horizontal|bottom"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:text="BY内蒙古工业大学-物联网13 张颖豪"
+        />
+
+</LinearLayout>
